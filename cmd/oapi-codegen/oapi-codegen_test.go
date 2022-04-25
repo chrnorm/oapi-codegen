@@ -3,7 +3,7 @@ package main
 import (
 	"testing"
 
-	"github.com/deepmap/oapi-codegen/pkg/util"
+	"github.com/chrnorm/oapi-codegen/pkg/util"
 )
 
 func TestLoader(t *testing.T) {
