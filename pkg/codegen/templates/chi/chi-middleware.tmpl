@@ -39,8 +39,9 @@ func (siw *ServerInterfaceWrapper) {{$opid}}(w http.ResponseWriter, r *http.Requ
 
   {{end}}
 
+{{$typePackagePrefix := .TypePackagePrefix}}
 {{range .SecurityDefinitions}}
-  ctx = context.WithValue(ctx, {{$.TypePackagePrefix}}{{.ProviderName | ucFirst}}Scopes, {{toStringArray .Scopes}})
+  ctx = context.WithValue(ctx, {{$typePackagePrefix}}{{.ProviderName | ucFirst}}Scopes, {{toStringArray .Scopes}})
 {{end}}
 
   {{if .RequiresParamObject}}
